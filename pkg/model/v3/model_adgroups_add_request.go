@@ -72,4 +72,6 @@ type AdgroupsAddRequest struct {
 	SearchExpansionSwitch             SearchExpansionSwitch       `json:"search_expansion_switch,omitempty"`
 	AdxRealtimeType                   AdxRealtimeType             `json:"adx_realtime_type,omitempty"`
 	EnableSteadyExploration           *bool                       `json:"enable_steady_exploration,omitempty"`
+	ExcludedCustomAudience            *[]int64                         `json:"excluded_custom_audience,omitempty"`
+	CustomAudience            	  *[]int64                         `json:"custom_audience,omitempty"`
 }
