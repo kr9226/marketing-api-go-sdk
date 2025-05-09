@@ -64,4 +64,6 @@ type AdgroupsAddRequest struct {
 	SearchExpandTargetingSwitch       SearchExpandTargetingSwitch      `json:"search_expand_targeting_switch,omitempty"`
 	BidScene                          BidScene                         `json:"bid_scene,omitempty"`
 	AccountId                         *int64                           `json:"account_id,omitempty"`
+	ExcludedCustomAudience            *[]int64                         `json:"excluded_custom_audience,omitempty"`
+	CustomAudience            	  *[]int64                         `json:"custom_audience,omitempty"`
 }
