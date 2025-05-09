@@ -26,5 +26,8 @@ type TaskSpec struct {
 	TaskTypeUpdateAndroidUnionChannelPackageSpec *TaskTypeUpdateAndroidUnionChannelPackageSpec `json:"task_type_update_android_union_channel_package_spec,omitempty"`
 	TaskTypeUnionPositionReportSpec              *TaskTypeUnionPositionReportSpec              `json:"task_type_union_position_report_spec,omitempty"`
 	TaskTypeReviewElementPrereviewResultSpec     *TaskTypeReviewElementPrereviewResultSpec     `json:"task_type_review_element_prereview_result_spec,omitempty"`
+	TaskTypeMassiveKeywordRecommendSpec          *TaskTypeMassiveKeywordRecommendSpec          `json:"task_type_massive_keyword_recommend_spec,omitempty"`
 	TaskTypeSearchDownloadAllSpec                *TaskTypeSearchDownloadAllSpec                `json:"task_type_search_download_all_spec,omitempty"`
+	AdcleanerUpdateAdgroupConfiguredStatusSpec   *AdcleanerUpdateAdgroupConfiguredStatusSpec   `json:"adcleaner_update_adgroup_configured_status_spec,omitempty"`
+	AdcleanerDeleteAdgroupSpec                   *AdcleanerDeleteAdgroupSpec                   `json:"adcleaner_delete_adgroup_spec,omitempty"`
 }

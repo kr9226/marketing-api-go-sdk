@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DataSourceId** | **int64** |  | [optional] [default to null]
+**UserActionSetId** | **int64** |  | [optional] [default to null]
 **Scenes** | [**[]SingleUpdateScenes**](single_update_scenes.md) |  | [optional] [default to null]
 **SwitchType** | [***FileDispatchSwitch**](FileDispatchSwitch.md) |  | [optional] [default to null]
 

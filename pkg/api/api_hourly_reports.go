@@ -11,13 +11,15 @@ package api
 
 import (
 	"context"
-	"github.com/antihax/optional"
-	"github.com/tencentad/marketing-api-go-sdk/pkg/errors"
-	. "github.com/tencentad/marketing-api-go-sdk/pkg/model"
 	"io/ioutil"
 	"net/http"
 	"net/url"
 	"strings"
+
+	"github.com/antihax/optional"
+	"github.com/tencentad/marketing-api-go-sdk/pkg/errors"
+	"github.com/tencentad/marketing-api-go-sdk/pkg/model"
+	. "github.com/tencentad/marketing-api-go-sdk/pkg/model"
 )
 
 // Linger please
@@ -42,6 +44,7 @@ HourlyReportsApiService 获取小时报表
      * @param "TimeLine" (optional.String) -
      * @param "Fields" (optional.Interface of []string) -
      * @param "WeixinOfficialAccountsUpgradeEnabled" (optional.Bool) -
+     * @param "AdqAccountsUpgradeEnabled" (optional.Bool) -
 
 @return HourlyReportsGetResponse
 */
@@ -55,6 +58,7 @@ type HourlyReportsGetOpts struct {
 	TimeLine                             optional.String
 	Fields                               optional.Interface
 	WeixinOfficialAccountsUpgradeEnabled optional.Bool
+	AdqAccountsUpgradeEnabled            optional.Bool
 }
 
 func (a *HourlyReportsApiService) Get(ctx context.Context, accountId int64, level string, dateRange DateRange, localVarOptionals *HourlyReportsGetOpts) (HourlyReportsGetResponseData, http.Header, error) {
@@ -102,6 +106,9 @@ func (a *HourlyReportsApiService) Get(ctx context.Context, accountId int64, leve
 	if localVarOptionals != nil && localVarOptionals.WeixinOfficialAccountsUpgradeEnabled.IsSet() {
 		localVarQueryParams.Add("weixin_official_accounts_upgrade_enabled", parameterToString(localVarOptionals.WeixinOfficialAccountsUpgradeEnabled.Value(), ""))
 	}
+	if localVarOptionals != nil && localVarOptionals.AdqAccountsUpgradeEnabled.IsSet() {
+		localVarQueryParams.Add("adq_accounts_upgrade_enabled", parameterToString(localVarOptionals.AdqAccountsUpgradeEnabled.Value(), ""))
+	}
 	// to determine the Content-Type header
 	localVarHttpContentTypes := []string{"text/plain"}
 
@@ -140,7 +147,7 @@ func (a *HourlyReportsApiService) Get(ctx context.Context, accountId int64, leve
 		err = a.client.decode(&localVarResponse, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
 		if err == nil {
 			if *localVarResponse.Code != 0 {
-				var localVarResponseErrors []ApiErrorStruct
+				var localVarResponseErrors []model.ApiErrorStruct
 				if localVarResponse.Errors != nil {
 					localVarResponseErrors = *localVarResponse.Errors
 				}

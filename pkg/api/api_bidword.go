@@ -11,12 +11,14 @@ package api
 
 import (
 	"context"
-	"github.com/tencentad/marketing-api-go-sdk/pkg/errors"
-	. "github.com/tencentad/marketing-api-go-sdk/pkg/model"
 	"io/ioutil"
 	"net/http"
 	"net/url"
 	"strings"
+
+	"github.com/tencentad/marketing-api-go-sdk/pkg/errors"
+	"github.com/tencentad/marketing-api-go-sdk/pkg/model"
+	. "github.com/tencentad/marketing-api-go-sdk/pkg/model"
 )
 
 // Linger please
@@ -91,7 +93,7 @@ func (a *BidwordApiService) Add(ctx context.Context, data BidwordAddRequest) (Bi
 		err = a.client.decode(&localVarResponse, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
 		if err == nil {
 			if *localVarResponse.Code != 0 {
-				var localVarResponseErrors []ApiErrorStruct
+				var localVarResponseErrors []model.ApiErrorStruct
 				if localVarResponse.Errors != nil {
 					localVarResponseErrors = *localVarResponse.Errors
 				}
@@ -196,7 +198,7 @@ func (a *BidwordApiService) Delete(ctx context.Context, data BidwordDeleteReques
 		err = a.client.decode(&localVarResponse, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
 		if err == nil {
 			if *localVarResponse.Code != 0 {
-				var localVarResponseErrors []ApiErrorStruct
+				var localVarResponseErrors []model.ApiErrorStruct
 				if localVarResponse.Errors != nil {
 					localVarResponseErrors = *localVarResponse.Errors
 				}
@@ -301,7 +303,7 @@ func (a *BidwordApiService) Get(ctx context.Context, data BidwordGetRequest) (Bi
 		err = a.client.decode(&localVarResponse, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
 		if err == nil {
 			if *localVarResponse.Code != 0 {
-				var localVarResponseErrors []ApiErrorStruct
+				var localVarResponseErrors []model.ApiErrorStruct
 				if localVarResponse.Errors != nil {
 					localVarResponseErrors = *localVarResponse.Errors
 				}
@@ -406,7 +408,7 @@ func (a *BidwordApiService) Update(ctx context.Context, data BidwordUpdateReques
 		err = a.client.decode(&localVarResponse, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
 		if err == nil {
 			if *localVarResponse.Code != 0 {
-				var localVarResponseErrors []ApiErrorStruct
+				var localVarResponseErrors []model.ApiErrorStruct
 				if localVarResponse.Errors != nil {
 					localVarResponseErrors = *localVarResponse.Errors
 				}

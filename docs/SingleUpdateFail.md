@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DataSourceId** | **int64** |  | [optional] [default to null]
+**UserActionSetId** | **int64** |  | [optional] [default to null]
 **Scenes** | [**[]SingleUpdateFailedScenes**](single_update_failed_scenes.md) |  | [optional] [default to null]
 **FailReason** | **string** |  | [optional] [default to null]
 

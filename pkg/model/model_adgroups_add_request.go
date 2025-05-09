@@ -22,6 +22,8 @@ type AdgroupsAddRequest struct {
 	TimeSeries                        *string                          `json:"time_series,omitempty"`
 	AutomaticSiteEnabled              *bool                            `json:"automatic_site_enabled,omitempty"`
 	SiteSet                           *[]string                        `json:"site_set,omitempty"`
+	ExplorationStrategy               SiteSetExplorationStrategy       `json:"exploration_strategy,omitempty"`
+	PrioritySiteSet                   *[]string                        `json:"priority_site_set,omitempty"`
 	DailyBudget                       *int64                           `json:"daily_budget,omitempty"`
 	PromotedObjectId                  *string                          `json:"promoted_object_id,omitempty"`
 	AppAndroidChannelPackageId        *string                          `json:"app_android_channel_package_id,omitempty"`
@@ -56,13 +58,20 @@ type AdgroupsAddRequest struct {
 	AutoDerivedCreativeEnabled        *bool                            `json:"auto_derived_creative_enabled,omitempty"`
 	SmartBidType                      SmartBidType                     `json:"smart_bid_type,omitempty"`
 	MarketingScene                    MarketingScene                   `json:"marketing_scene,omitempty"`
+	LiveVideoMode                     LiveVideoMode                    `json:"live_video_mode,omitempty"`
+	LiveVideoSubMode                  LiveVideoSubMode                 `json:"live_video_sub_mode,omitempty"`
 	CustomAdgroupTag                  *[]string                        `json:"custom_adgroup_tag,omitempty"`
 	SmartTargeting                    *SmartTargeting                  `json:"smart_targeting,omitempty"`
 	DynamicCreativeIdSet              *[]int64                         `json:"dynamic_creative_id_set,omitempty"`
 	AutoDerivedLandingPageSwitch      *bool                            `json:"auto_derived_landing_page_switch,omitempty"`
-	SearchExpansionSwitch             SearchExpansionSwitch            `json:"search_expansion_switch,omitempty"`
 	SearchExpandTargetingSwitch       SearchExpandTargetingSwitch      `json:"search_expand_targeting_switch,omitempty"`
+	EcomPkamSwitch                    EcomPkamSwitch                   `json:"ecom_pkam_switch,omitempty"`
 	BidScene                          BidScene                         `json:"bid_scene,omitempty"`
+	SearchIntelligentExtension        ModelSwitch                      `json:"search_intelligent_extension,omitempty"`
+	ForwardLinkAssist                 OptimizationGoal                 `json:"forward_link_assist,omitempty"`
+	ShortPlayPayType                  ShortPlayPayType                 `json:"short_play_pay_type,omitempty"`
+	SellStrategyId                    *int64                           `json:"sell_strategy_id,omitempty"`
+	FeedbackId                        *int64                           `json:"feedback_id,omitempty"`
 	AccountId                         *int64                           `json:"account_id,omitempty"`
 	ExcludedCustomAudience            *[]int64                         `json:"excluded_custom_audience,omitempty"`
 	CustomAudience            	  *[]int64                         `json:"custom_audience,omitempty"`

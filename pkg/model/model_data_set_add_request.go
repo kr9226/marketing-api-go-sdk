@@ -10,7 +10,7 @@
 package model
 
 type DataSetAddRequest struct {
-	AccountId    *int64 `json:"account_id,omitempty"`
-	DataSourceId *int64 `json:"data_source_id,omitempty"`
-	EnvType      *int64 `json:"env_type,omitempty"`
+	AccountId       *int64 `json:"account_id,omitempty"`
+	UserActionSetId *int64 `json:"user_action_set_id,omitempty"`
+	EnvType         *int64 `json:"env_type,omitempty"`
 }

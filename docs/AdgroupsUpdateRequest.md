@@ -38,12 +38,18 @@ Name | Type | Description | Notes
 **AutoAcquisitionBudget** | **int64** |  | [optional] [default to null]
 **AutoDerivedCreativeEnabled** | **bool** |  | [optional] [default to null]
 **AutoDerivedCreativeStatus** | [***AutoDerivedCreativeStatus**](AutoDerivedCreativeStatus.md) |  | [optional] [default to null]
+**LiveVideoMode** | [***LiveVideoMode**](LiveVideoMode.md) |  | [optional] [default to null]
+**LiveVideoSubMode** | [***LiveVideoSubMode**](LiveVideoSubMode.md) |  | [optional] [default to null]
 **UserActionSets** | [**[]UserActionSetStruct**](user_action_set_struct.md) |  | [optional] [default to null]
 **DynamicAdSpec** | [***DynamicAdSpec**](dynamic_ad_spec.md) |  | [optional] [default to null]
 **CustomAdgroupTag** | **[]string** |  | [optional] [default to null]
 **SmartTargeting** | [***SmartTargeting**](smart_targeting.md) |  | [optional] [default to null]
 **DynamicCreativeIdSet** | **[]int64** |  | [optional] [default to null]
 **AutoDerivedLandingPageSwitch** | **bool** |  | [optional] [default to null]
+**EcomPkamSwitch** | [***EcomPkamSwitch**](EcomPkamSwitch.md) |  | [optional] [default to null]
+**SearchIntelligentExtension** | [***ModelSwitch**](Switch.md) |  | [optional] [default to null]
+**SearchExpandTargetingSwitch** | [***SearchExpandTargetingSwitch**](SearchExpandTargetingSwitch.md) |  | [optional] [default to null]
+**FeedbackId** | **int64** |  | [optional] [default to null]
 **AccountId** | **int64** |  | [optional] [default to null]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

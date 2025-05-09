@@ -11,12 +11,14 @@ package api
 
 import (
 	"context"
-	"github.com/tencentad/marketing-api-go-sdk/pkg/errors"
-	. "github.com/tencentad/marketing-api-go-sdk/pkg/model"
 	"io/ioutil"
 	"net/http"
 	"net/url"
 	"strings"
+
+	"github.com/tencentad/marketing-api-go-sdk/pkg/errors"
+	"github.com/tencentad/marketing-api-go-sdk/pkg/model"
+	. "github.com/tencentad/marketing-api-go-sdk/pkg/model"
 )
 
 // Linger please
@@ -91,7 +93,7 @@ func (a *XijingPageApiService) Add(ctx context.Context, data XijingPageAddReques
 		err = a.client.decode(&localVarResponse, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
 		if err == nil {
 			if *localVarResponse.Code != 0 {
-				var localVarResponseErrors []ApiErrorStruct
+				var localVarResponseErrors []model.ApiErrorStruct
 				if localVarResponse.Errors != nil {
 					localVarResponseErrors = *localVarResponse.Errors
 				}
@@ -192,7 +194,7 @@ func (a *XijingPageApiService) Delete(ctx context.Context, data XijingPageDelete
 		err = a.client.decode(&localVarResponse, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
 		if err == nil {
 			if *localVarResponse.Code != 0 {
-				var localVarResponseErrors []ApiErrorStruct
+				var localVarResponseErrors []model.ApiErrorStruct
 				if localVarResponse.Errors != nil {
 					localVarResponseErrors = *localVarResponse.Errors
 				}
@@ -293,7 +295,7 @@ func (a *XijingPageApiService) Update(ctx context.Context, data XijingPageUpdate
 		err = a.client.decode(&localVarResponse, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
 		if err == nil {
 			if *localVarResponse.Code != 0 {
-				var localVarResponseErrors []ApiErrorStruct
+				var localVarResponseErrors []model.ApiErrorStruct
 				if localVarResponse.Errors != nil {
 					localVarResponseErrors = *localVarResponse.Errors
 				}

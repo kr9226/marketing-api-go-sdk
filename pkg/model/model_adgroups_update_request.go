@@ -45,11 +45,17 @@ type AdgroupsUpdateRequest struct {
 	AutoAcquisitionBudget             *int64                           `json:"auto_acquisition_budget,omitempty"`
 	AutoDerivedCreativeEnabled        *bool                            `json:"auto_derived_creative_enabled,omitempty"`
 	AutoDerivedCreativeStatus         AutoDerivedCreativeStatus        `json:"auto_derived_creative_status,omitempty"`
+	LiveVideoMode                     LiveVideoMode                    `json:"live_video_mode,omitempty"`
+	LiveVideoSubMode                  LiveVideoSubMode                 `json:"live_video_sub_mode,omitempty"`
 	UserActionSets                    *[]UserActionSetStruct           `json:"user_action_sets,omitempty"`
 	DynamicAdSpec                     *DynamicAdSpec                   `json:"dynamic_ad_spec,omitempty"`
 	CustomAdgroupTag                  *[]string                        `json:"custom_adgroup_tag,omitempty"`
 	SmartTargeting                    *SmartTargeting                  `json:"smart_targeting,omitempty"`
 	DynamicCreativeIdSet              *[]int64                         `json:"dynamic_creative_id_set,omitempty"`
 	AutoDerivedLandingPageSwitch      *bool                            `json:"auto_derived_landing_page_switch,omitempty"`
+	EcomPkamSwitch                    EcomPkamSwitch                   `json:"ecom_pkam_switch,omitempty"`
+	SearchIntelligentExtension        ModelSwitch                      `json:"search_intelligent_extension,omitempty"`
+	SearchExpandTargetingSwitch       SearchExpandTargetingSwitch      `json:"search_expand_targeting_switch,omitempty"`
+	FeedbackId                        *int64                           `json:"feedback_id,omitempty"`
 	AccountId                         *int64                           `json:"account_id,omitempty"`
 }

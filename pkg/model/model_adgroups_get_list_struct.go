@@ -16,6 +16,8 @@ type AdgroupsGetListStruct struct {
 	AdgroupName                       *string                         `json:"adgroup_name,omitempty"`
 	SiteSet                           *[]string                       `json:"site_set,omitempty"`
 	AutomaticSiteEnabled              *bool                           `json:"automatic_site_enabled,omitempty"`
+	ExplorationStrategy               SiteSetExplorationStrategy      `json:"exploration_strategy,omitempty"`
+	PrioritySiteSet                   *[]string                       `json:"priority_site_set,omitempty"`
 	OptimizationGoal                  OptimizationGoal                `json:"optimization_goal,omitempty"`
 	BillingEvent                      BillingEvent                    `json:"billing_event,omitempty"`
 	BidAmount                         *int64                          `json:"bid_amount,omitempty"`
@@ -78,8 +80,13 @@ type AdgroupsGetListStruct struct {
 	DynamicCreativeIdSet              *[]int64                        `json:"dynamic_creative_id_set,omitempty"`
 	SystemStatusExplanation           *string                         `json:"system_status_explanation,omitempty"`
 	AutoDerivedLandingPageSwitch      *bool                           `json:"auto_derived_landing_page_switch,omitempty"`
-	SearchExpansionSwitch             SearchExpansionSwitch           `json:"search_expansion_switch,omitempty"`
 	SearchExpandTargetingSwitch       SearchExpandTargetingSwitch     `json:"search_expand_targeting_switch,omitempty"`
 	AutoAcquisitionStatus             AutoAcquisitionStatus           `json:"auto_acquisition_status,omitempty"`
+	EcomPkamSwitch                    EcomPkamSwitch                  `json:"ecom_pkam_switch,omitempty"`
 	BidScene                          BidScene                        `json:"bid_scene,omitempty"`
+	SearchIntelligentExtension        ModelSwitch                     `json:"search_intelligent_extension,omitempty"`
+	ForwardLinkAssist                 OptimizationGoal                `json:"forward_link_assist,omitempty"`
+	ShortPlayPayType                  ShortPlayPayType                `json:"short_play_pay_type,omitempty"`
+	SellStrategyId                    *int64                          `json:"sell_strategy_id,omitempty"`
+	FeedbackId                        *int64                          `json:"feedback_id,omitempty"`
 }

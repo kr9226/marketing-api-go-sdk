@@ -11,7 +11,7 @@ package model
 
 // 数据源分发详情
 type SingleUpdateFail struct {
-	DataSourceId *int64                      `json:"data_source_id,omitempty"`
-	Scenes       *[]SingleUpdateFailedScenes `json:"scenes,omitempty"`
-	FailReason   *string                     `json:"fail_reason,omitempty"`
+	UserActionSetId *int64                      `json:"user_action_set_id,omitempty"`
+	Scenes          *[]SingleUpdateFailedScenes `json:"scenes,omitempty"`
+	FailReason      *string                     `json:"fail_reason,omitempty"`
 }

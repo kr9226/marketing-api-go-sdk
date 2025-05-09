@@ -8,6 +8,8 @@ Name | Type | Description | Notes
 **AdgroupName** | **string** |  | [optional] [default to null]
 **SiteSet** | **[]string** |  | [optional] [default to null]
 **AutomaticSiteEnabled** | **bool** |  | [optional] [default to null]
+**ExplorationStrategy** | [***SiteSetExplorationStrategy**](SiteSetExplorationStrategy.md) |  | [optional] [default to null]
+**PrioritySiteSet** | **[]string** |  | [optional] [default to null]
 **OptimizationGoal** | [***OptimizationGoal**](OptimizationGoal.md) |  | [optional] [default to null]
 **BillingEvent** | [***BillingEvent**](BillingEvent.md) |  | [optional] [default to null]
 **BidAmount** | **int64** |  | [optional] [default to null]
@@ -70,10 +72,15 @@ Name | Type | Description | Notes
 **DynamicCreativeIdSet** | **[]int64** |  | [optional] [default to null]
 **SystemStatusExplanation** | **string** |  | [optional] [default to null]
 **AutoDerivedLandingPageSwitch** | **bool** |  | [optional] [default to null]
-**SearchExpansionSwitch** | [***SearchExpansionSwitch**](SearchExpansionSwitch.md) |  | [optional] [default to null]
 **SearchExpandTargetingSwitch** | [***SearchExpandTargetingSwitch**](SearchExpandTargetingSwitch.md) |  | [optional] [default to null]
 **AutoAcquisitionStatus** | [***AutoAcquisitionStatus**](AutoAcquisitionStatus.md) |  | [optional] [default to null]
+**EcomPkamSwitch** | [***EcomPkamSwitch**](EcomPkamSwitch.md) |  | [optional] [default to null]
 **BidScene** | [***BidScene**](BidScene.md) |  | [optional] [default to null]
+**SearchIntelligentExtension** | [***ModelSwitch**](Switch.md) |  | [optional] [default to null]
+**ForwardLinkAssist** | [***OptimizationGoal**](OptimizationGoal.md) |  | [optional] [default to null]
+**ShortPlayPayType** | [***ShortPlayPayType**](ShortPlayPayType.md) |  | [optional] [default to null]
+**SellStrategyId** | **int64** |  | [optional] [default to null]
+**FeedbackId** | **int64** |  | [optional] [default to null]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -11,13 +11,15 @@ package api
 
 import (
 	"context"
-	"github.com/antihax/optional"
-	"github.com/tencentad/marketing-api-go-sdk/pkg/errors"
-	. "github.com/tencentad/marketing-api-go-sdk/pkg/model"
 	"io/ioutil"
 	"net/http"
 	"net/url"
 	"strings"
+
+	"github.com/antihax/optional"
+	"github.com/tencentad/marketing-api-go-sdk/pkg/errors"
+	"github.com/tencentad/marketing-api-go-sdk/pkg/model"
+	. "github.com/tencentad/marketing-api-go-sdk/pkg/model"
 )
 
 // Linger please
@@ -92,7 +94,7 @@ func (a *AdgroupsApiService) Add(ctx context.Context, data AdgroupsAddRequest) (
 		err = a.client.decode(&localVarResponse, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
 		if err == nil {
 			if *localVarResponse.Code != 0 {
-				var localVarResponseErrors []ApiErrorStruct
+				var localVarResponseErrors []model.ApiErrorStruct
 				if localVarResponse.Errors != nil {
 					localVarResponseErrors = *localVarResponse.Errors
 				}
@@ -197,7 +199,7 @@ func (a *AdgroupsApiService) AddNegativeword(ctx context.Context, data AdgroupsA
 		err = a.client.decode(&localVarResponse, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
 		if err == nil {
 			if *localVarResponse.Code != 0 {
-				var localVarResponseErrors []ApiErrorStruct
+				var localVarResponseErrors []model.ApiErrorStruct
 				if localVarResponse.Errors != nil {
 					localVarResponseErrors = *localVarResponse.Errors
 				}
@@ -302,7 +304,7 @@ func (a *AdgroupsApiService) Delete(ctx context.Context, data AdgroupsDeleteRequ
 		err = a.client.decode(&localVarResponse, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
 		if err == nil {
 			if *localVarResponse.Code != 0 {
-				var localVarResponseErrors []ApiErrorStruct
+				var localVarResponseErrors []model.ApiErrorStruct
 				if localVarResponse.Errors != nil {
 					localVarResponseErrors = *localVarResponse.Errors
 				}
@@ -441,7 +443,7 @@ func (a *AdgroupsApiService) Get(ctx context.Context, accountId int64, localVarO
 		err = a.client.decode(&localVarResponse, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
 		if err == nil {
 			if *localVarResponse.Code != 0 {
-				var localVarResponseErrors []ApiErrorStruct
+				var localVarResponseErrors []model.ApiErrorStruct
 				if localVarResponse.Errors != nil {
 					localVarResponseErrors = *localVarResponse.Errors
 				}
@@ -546,7 +548,7 @@ func (a *AdgroupsApiService) GetNegativeword(ctx context.Context, data AdgroupsG
 		err = a.client.decode(&localVarResponse, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
 		if err == nil {
 			if *localVarResponse.Code != 0 {
-				var localVarResponseErrors []ApiErrorStruct
+				var localVarResponseErrors []model.ApiErrorStruct
 				if localVarResponse.Errors != nil {
 					localVarResponseErrors = *localVarResponse.Errors
 				}
@@ -651,7 +653,7 @@ func (a *AdgroupsApiService) Update(ctx context.Context, data AdgroupsUpdateRequ
 		err = a.client.decode(&localVarResponse, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
 		if err == nil {
 			if *localVarResponse.Code != 0 {
-				var localVarResponseErrors []ApiErrorStruct
+				var localVarResponseErrors []model.ApiErrorStruct
 				if localVarResponse.Errors != nil {
 					localVarResponseErrors = *localVarResponse.Errors
 				}
@@ -756,7 +758,7 @@ func (a *AdgroupsApiService) UpdateBidAmount(ctx context.Context, data AdgroupsU
 		err = a.client.decode(&localVarResponse, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
 		if err == nil {
 			if *localVarResponse.Code != 0 {
-				var localVarResponseErrors []ApiErrorStruct
+				var localVarResponseErrors []model.ApiErrorStruct
 				if localVarResponse.Errors != nil {
 					localVarResponseErrors = *localVarResponse.Errors
 				}
@@ -861,7 +863,7 @@ func (a *AdgroupsApiService) UpdateConfiguredStatus(ctx context.Context, data Ad
 		err = a.client.decode(&localVarResponse, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
 		if err == nil {
 			if *localVarResponse.Code != 0 {
-				var localVarResponseErrors []ApiErrorStruct
+				var localVarResponseErrors []model.ApiErrorStruct
 				if localVarResponse.Errors != nil {
 					localVarResponseErrors = *localVarResponse.Errors
 				}
@@ -966,7 +968,7 @@ func (a *AdgroupsApiService) UpdateDailyBudget(ctx context.Context, data Adgroup
 		err = a.client.decode(&localVarResponse, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
 		if err == nil {
 			if *localVarResponse.Code != 0 {
-				var localVarResponseErrors []ApiErrorStruct
+				var localVarResponseErrors []model.ApiErrorStruct
 				if localVarResponse.Errors != nil {
 					localVarResponseErrors = *localVarResponse.Errors
 				}
@@ -1071,7 +1073,7 @@ func (a *AdgroupsApiService) UpdateDatetime(ctx context.Context, data AdgroupsUp
 		err = a.client.decode(&localVarResponse, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
 		if err == nil {
 			if *localVarResponse.Code != 0 {
-				var localVarResponseErrors []ApiErrorStruct
+				var localVarResponseErrors []model.ApiErrorStruct
 				if localVarResponse.Errors != nil {
 					localVarResponseErrors = *localVarResponse.Errors
 				}
@@ -1176,7 +1178,7 @@ func (a *AdgroupsApiService) UpdateNegativeword(ctx context.Context, data Adgrou
 		err = a.client.decode(&localVarResponse, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
 		if err == nil {
 			if *localVarResponse.Code != 0 {
-				var localVarResponseErrors []ApiErrorStruct
+				var localVarResponseErrors []model.ApiErrorStruct
 				if localVarResponse.Errors != nil {
 					localVarResponseErrors = *localVarResponse.Errors
 				}

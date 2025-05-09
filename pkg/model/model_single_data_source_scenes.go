@@ -11,7 +11,7 @@ package model
 
 // 数据源分发详情
 type SingleDataSourceScenes struct {
-	DataSourceId *int64                `json:"data_source_id,omitempty"`
-	Scenes       *[]SingleUpdateScenes `json:"scenes,omitempty"`
-	SwitchType   FileDispatchSwitch    `json:"switch_type,omitempty"`
+	UserActionSetId *int64                `json:"user_action_set_id,omitempty"`
+	Scenes          *[]SingleUpdateScenes `json:"scenes,omitempty"`
+	SwitchType      FileDispatchSwitch    `json:"switch_type,omitempty"`
 }

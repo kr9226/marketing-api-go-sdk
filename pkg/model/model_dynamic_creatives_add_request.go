@@ -48,6 +48,7 @@ type DynamicCreativesAddRequest struct {
 	CountdownSwitch                  *bool                       `json:"countdown_switch,omitempty"`
 	AppGiftPackCode                  *AppGiftPackCode            `json:"app_gift_pack_code,omitempty"`
 	EnableBreakthroughSiteset        *bool                       `json:"enable_breakthrough_siteset,omitempty"`
+	LandingPageOptions               *[]DynamicLandingPageInfo   `json:"landing_page_options,omitempty"`
 	UnionMarketSpec                  *UnionMarketSpec            `json:"union_market_spec,omitempty"`
 	AutoDerivedProgramCreativeSwitch *bool                       `json:"auto_derived_program_creative_switch,omitempty"`
 	ProgramCreativeInfo              *ProgramCreativeInfo        `json:"program_creative_info,omitempty"`
@@ -55,6 +56,7 @@ type DynamicCreativesAddRequest struct {
 	HeadClickType                    HeadClickType               `json:"head_click_type,omitempty"`
 	HeadClickSpec                    *HeadClickSpec              `json:"head_click_spec,omitempty"`
 	CampaignId                       *int64                      `json:"campaign_id,omitempty"`
+	WechatChannelsTrackingSpec       *WechatChannelsTrackingSpec `json:"wechat_channels_tracking_spec,omitempty"`
 	PageTrackUrl                     *string                     `json:"page_track_url,omitempty"`
 	IndustryLabel                    *string                     `json:"industry_label,omitempty"`
 	SublinkSwitch                    AdvertiserSublinkSwitch     `json:"sublink_switch,omitempty"`

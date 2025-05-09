@@ -11,14 +11,16 @@ package api
 
 import (
 	"context"
-	"github.com/antihax/optional"
-	"github.com/tencentad/marketing-api-go-sdk/pkg/errors"
-	. "github.com/tencentad/marketing-api-go-sdk/pkg/model"
 	"io/ioutil"
 	"net/http"
 	"net/url"
 	"os"
 	"strings"
+
+	"github.com/antihax/optional"
+	"github.com/tencentad/marketing-api-go-sdk/pkg/errors"
+	"github.com/tencentad/marketing-api-go-sdk/pkg/model"
+	. "github.com/tencentad/marketing-api-go-sdk/pkg/model"
 )
 
 // Linger please
@@ -125,7 +127,7 @@ func (a *VideosApiService) Add(ctx context.Context, accountId int64, videoFile *
 		err = a.client.decode(&localVarResponse, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
 		if err == nil {
 			if *localVarResponse.Code != 0 {
-				var localVarResponseErrors []ApiErrorStruct
+				var localVarResponseErrors []model.ApiErrorStruct
 				if localVarResponse.Errors != nil {
 					localVarResponseErrors = *localVarResponse.Errors
 				}
@@ -230,7 +232,7 @@ func (a *VideosApiService) Delete(ctx context.Context, data VideosDeleteRequest)
 		err = a.client.decode(&localVarResponse, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
 		if err == nil {
 			if *localVarResponse.Code != 0 {
-				var localVarResponseErrors []ApiErrorStruct
+				var localVarResponseErrors []model.ApiErrorStruct
 				if localVarResponse.Errors != nil {
 					localVarResponseErrors = *localVarResponse.Errors
 				}
@@ -359,7 +361,7 @@ func (a *VideosApiService) Get(ctx context.Context, accountId int64, localVarOpt
 		err = a.client.decode(&localVarResponse, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
 		if err == nil {
 			if *localVarResponse.Code != 0 {
-				var localVarResponseErrors []ApiErrorStruct
+				var localVarResponseErrors []model.ApiErrorStruct
 				if localVarResponse.Errors != nil {
 					localVarResponseErrors = *localVarResponse.Errors
 				}
@@ -464,7 +466,7 @@ func (a *VideosApiService) Update(ctx context.Context, data VideosUpdateRequest)
 		err = a.client.decode(&localVarResponse, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
 		if err == nil {
 			if *localVarResponse.Code != 0 {
-				var localVarResponseErrors []ApiErrorStruct
+				var localVarResponseErrors []model.ApiErrorStruct
 				if localVarResponse.Errors != nil {
 					localVarResponseErrors = *localVarResponse.Errors
 				}

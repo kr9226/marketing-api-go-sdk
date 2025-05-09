@@ -13,6 +13,10 @@ import (
 	"github.com/tencentad/marketing-api-go-sdk/pkg/api"
 )
 
+func (c *SDKClient) AdAppealQuota() *api.AdAppealQuotaApiService {
+	return c.Client.AdAppealQuotaApi
+}
+
 func (c *SDKClient) AdDiagnosis() *api.AdDiagnosisApiService {
 	return c.Client.AdDiagnosisApi
 }
@@ -73,6 +77,10 @@ func (c *SDKClient) Adgroups() *api.AdgroupsApiService {
 	return c.Client.AdgroupsApi
 }
 
+func (c *SDKClient) AdqReportsUpgradeStatus() *api.AdqReportsUpgradeStatusApiService {
+	return c.Client.AdqReportsUpgradeStatusApi
+}
+
 func (c *SDKClient) Ads() *api.AdsApiService {
 	return c.Client.AdsApi
 }
@@ -85,8 +93,8 @@ func (c *SDKClient) AdvertiserDailyBudget() *api.AdvertiserDailyBudgetApiService
 	return c.Client.AdvertiserDailyBudgetApi
 }
 
-func (c *SDKClient) AgencyInnerTransfer() *api.AgencyInnerTransferApiService {
-	return c.Client.AgencyInnerTransferApi
+func (c *SDKClient) Agency() *api.AgencyApiService {
+	return c.Client.AgencyApi
 }
 
 func (c *SDKClient) AgencyRealtimeCost() *api.AgencyRealtimeCostApiService {
@@ -185,6 +193,10 @@ func (c *SDKClient) BusinessMdmAccountRelations() *api.BusinessMdmAccountRelatio
 	return c.Client.BusinessMdmAccountRelationsApi
 }
 
+func (c *SDKClient) BusinessPoint() *api.BusinessPointApiService {
+	return c.Client.BusinessPointApi
+}
+
 func (c *SDKClient) CampaignNegativewords() *api.CampaignNegativewordsApiService {
 	return c.Client.CampaignNegativewordsApi
 }
@@ -197,10 +209,6 @@ func (c *SDKClient) Capabilities() *api.CapabilitiesApiService {
 	return c.Client.CapabilitiesApi
 }
 
-func (c *SDKClient) Channels() *api.ChannelsApiService {
-	return c.Client.ChannelsApi
-}
-
 func (c *SDKClient) ComplianceValidation() *api.ComplianceValidationApiService {
 	return c.Client.ComplianceValidationApi
 }
@@ -211,6 +219,10 @@ func (c *SDKClient) Conversions() *api.ConversionsApiService {
 
 func (c *SDKClient) CreativeComponents() *api.CreativeComponentsApiService {
 	return c.Client.CreativeComponentsApi
+}
+
+func (c *SDKClient) CreativeSampleProducts() *api.CreativeSampleProductsApiService {
+	return c.Client.CreativeSampleProductsApi
 }
 
 func (c *SDKClient) CreativetoolsText() *api.CreativetoolsTextApiService {
@@ -257,24 +269,12 @@ func (c *SDKClient) DailyReports() *api.DailyReportsApiService {
 	return c.Client.DailyReportsApi
 }
 
-func (c *SDKClient) DataNexusFile() *api.DataNexusFileApiService {
-	return c.Client.DataNexusFileApi
-}
-
 func (c *SDKClient) DataSet() *api.DataSetApiService {
 	return c.Client.DataSetApi
 }
 
-func (c *SDKClient) DataSource() *api.DataSourceApiService {
-	return c.Client.DataSourceApi
-}
-
 func (c *SDKClient) DataSourceDispatch() *api.DataSourceDispatchApiService {
 	return c.Client.DataSourceDispatchApi
-}
-
-func (c *SDKClient) Diagnosis() *api.DiagnosisApiService {
-	return c.Client.DiagnosisApi
 }
 
 func (c *SDKClient) DplabelAdLabel() *api.DplabelAdLabelApiService {
@@ -287,10 +287,6 @@ func (c *SDKClient) DynamicAdImageTemplates() *api.DynamicAdImageTemplatesApiSer
 
 func (c *SDKClient) DynamicAdImages() *api.DynamicAdImagesApiService {
 	return c.Client.DynamicAdImagesApi
-}
-
-func (c *SDKClient) DynamicAdTemplates() *api.DynamicAdTemplatesApiService {
-	return c.Client.DynamicAdTemplatesApi
 }
 
 func (c *SDKClient) DynamicAdVideo() *api.DynamicAdVideoApiService {
@@ -317,18 +313,6 @@ func (c *SDKClient) ExtendPackage() *api.ExtendPackageApiService {
 	return c.Client.ExtendPackageApi
 }
 
-func (c *SDKClient) FileDispatch() *api.FileDispatchApiService {
-	return c.Client.FileDispatchApi
-}
-
-func (c *SDKClient) FileSchema() *api.FileSchemaApiService {
-	return c.Client.FileSchemaApi
-}
-
-func (c *SDKClient) FundStatementsDaily() *api.FundStatementsDailyApiService {
-	return c.Client.FundStatementsDailyApi
-}
-
 func (c *SDKClient) FundStatementsDetailed() *api.FundStatementsDetailedApiService {
 	return c.Client.FundStatementsDetailedApi
 }
@@ -339,6 +323,14 @@ func (c *SDKClient) FundTransfer() *api.FundTransferApiService {
 
 func (c *SDKClient) Funds() *api.FundsApiService {
 	return c.Client.FundsApi
+}
+
+func (c *SDKClient) GameFeature() *api.GameFeatureApiService {
+	return c.Client.GameFeatureApi
+}
+
+func (c *SDKClient) GameFeatureTags() *api.GameFeatureTagsApiService {
+	return c.Client.GameFeatureTagsApi
 }
 
 func (c *SDKClient) HourlyReports() *api.HourlyReportsApiService {
@@ -353,12 +345,20 @@ func (c *SDKClient) Images() *api.ImagesApiService {
 	return c.Client.ImagesApi
 }
 
+func (c *SDKClient) KeywordRecommend() *api.KeywordRecommendApiService {
+	return c.Client.KeywordRecommendApi
+}
+
 func (c *SDKClient) LabelAudiences() *api.LabelAudiencesApiService {
 	return c.Client.LabelAudiencesApi
 }
 
 func (c *SDKClient) Labels() *api.LabelsApiService {
 	return c.Client.LabelsApi
+}
+
+func (c *SDKClient) LandingPageSellStrategy() *api.LandingPageSellStrategyApiService {
+	return c.Client.LandingPageSellStrategyApi
 }
 
 func (c *SDKClient) LeadClues() *api.LeadCluesApiService {
@@ -397,18 +397,6 @@ func (c *SDKClient) LeadsInvalidPay() *api.LeadsInvalidPayApiService {
 	return c.Client.LeadsInvalidPayApi
 }
 
-func (c *SDKClient) Local() *api.LocalApiService {
-	return c.Client.LocalApi
-}
-
-func (c *SDKClient) LocalEndadsmanually() *api.LocalEndadsmanuallyApiService {
-	return c.Client.LocalEndadsmanuallyApi
-}
-
-func (c *SDKClient) LocalEstimatedamount() *api.LocalEstimatedamountApiService {
-	return c.Client.LocalEstimatedamountApi
-}
-
 func (c *SDKClient) LocalStores() *api.LocalStoresApiService {
 	return c.Client.LocalStoresApi
 }
@@ -427,6 +415,10 @@ func (c *SDKClient) LocalStoresSearchInfo() *api.LocalStoresSearchInfoApiService
 
 func (c *SDKClient) LocalStoresWxpayMerchants() *api.LocalStoresWxpayMerchantsApiService {
 	return c.Client.LocalStoresWxpayMerchantsApi
+}
+
+func (c *SDKClient) MaterialAudit() *api.MaterialAuditApiService {
+	return c.Client.MaterialAuditApi
 }
 
 func (c *SDKClient) MaterialLabels() *api.MaterialLabelsApiService {
@@ -453,8 +445,8 @@ func (c *SDKClient) Oauth() *api.OauthApiService {
 	return c.Client.OauthApi
 }
 
-func (c *SDKClient) OptimizationGoalPermissions() *api.OptimizationGoalPermissionsApiService {
-	return c.Client.OptimizationGoalPermissionsApi
+func (c *SDKClient) ObjectCommentFlag() *api.ObjectCommentFlagApiService {
+	return c.Client.ObjectCommentFlagApi
 }
 
 func (c *SDKClient) OuterClues() *api.OuterCluesApiService {
@@ -557,6 +549,10 @@ func (c *SDKClient) Report() *api.ReportApiService {
 	return c.Client.ReportApi
 }
 
+func (c *SDKClient) ReviewAdAppeal() *api.ReviewAdAppealApiService {
+	return c.Client.ReviewAdAppealApi
+}
+
 func (c *SDKClient) ReviewElementPrereviewResults() *api.ReviewElementPrereviewResultsApiService {
 	return c.Client.ReviewElementPrereviewResultsApi
 }
@@ -565,8 +561,8 @@ func (c *SDKClient) SceneSpecTags() *api.SceneSpecTagsApiService {
 	return c.Client.SceneSpecTagsApi
 }
 
-func (c *SDKClient) Shop() *api.ShopApiService {
-	return c.Client.ShopApi
+func (c *SDKClient) SeedElementQuota() *api.SeedElementQuotaApiService {
+	return c.Client.SeedElementQuotaApi
 }
 
 func (c *SDKClient) SplitTests() *api.SplitTestsApiService {
@@ -577,8 +573,8 @@ func (c *SDKClient) SubcustomerTransfer() *api.SubcustomerTransferApiService {
 	return c.Client.SubcustomerTransferApi
 }
 
-func (c *SDKClient) SystemStatus() *api.SystemStatusApiService {
-	return c.Client.SystemStatusApi
+func (c *SDKClient) TargetcpaTag() *api.TargetcpaTagApiService {
+	return c.Client.TargetcpaTagApi
 }
 
 func (c *SDKClient) TargetingTagReports() *api.TargetingTagReportsApiService {
@@ -629,6 +625,22 @@ func (c *SDKClient) UserPropertySets() *api.UserPropertySetsApiService {
 	return c.Client.UserPropertySetsApi
 }
 
+func (c *SDKClient) VideoChannelDealerData() *api.VideoChannelDealerDataApiService {
+	return c.Client.VideoChannelDealerDataApi
+}
+
+func (c *SDKClient) VideoChannelFansData() *api.VideoChannelFansDataApiService {
+	return c.Client.VideoChannelFansDataApi
+}
+
+func (c *SDKClient) VideoChannelLeadsData() *api.VideoChannelLeadsDataApiService {
+	return c.Client.VideoChannelLeadsDataApi
+}
+
+func (c *SDKClient) VideoChannelLiveData() *api.VideoChannelLiveDataApiService {
+	return c.Client.VideoChannelLiveDataApi
+}
+
 func (c *SDKClient) VideomakerAutoadjustments() *api.VideomakerAutoadjustmentsApiService {
 	return c.Client.VideomakerAutoadjustmentsApi
 }
@@ -651,22 +663,6 @@ func (c *SDKClient) Videos() *api.VideosApiService {
 
 func (c *SDKClient) WechatAdLabels() *api.WechatAdLabelsApiService {
 	return c.Client.WechatAdLabelsApi
-}
-
-func (c *SDKClient) WechatAdvertiserLocalBusiness() *api.WechatAdvertiserLocalBusinessApiService {
-	return c.Client.WechatAdvertiserLocalBusinessApi
-}
-
-func (c *SDKClient) WechatFundStatementsDetailed() *api.WechatFundStatementsDetailedApiService {
-	return c.Client.WechatFundStatementsDetailedApi
-}
-
-func (c *SDKClient) WechatFundTransfer() *api.WechatFundTransferApiService {
-	return c.Client.WechatFundTransferApi
-}
-
-func (c *SDKClient) WechatFunds() *api.WechatFundsApiService {
-	return c.Client.WechatFundsApi
 }
 
 func (c *SDKClient) WechatPages() *api.WechatPagesApiService {
@@ -693,10 +689,6 @@ func (c *SDKClient) WechatPagesGrantinfo() *api.WechatPagesGrantinfoApiService {
 	return c.Client.WechatPagesGrantinfoApi
 }
 
-func (c *SDKClient) WechatQualifications() *api.WechatQualificationsApiService {
-	return c.Client.WechatQualificationsApi
-}
-
 func (c *SDKClient) WeixinOfficialAccountsUpgradeStatus() *api.WeixinOfficialAccountsUpgradeStatusApiService {
 	return c.Client.WeixinOfficialAccountsUpgradeStatusApi
 }
@@ -705,28 +697,8 @@ func (c *SDKClient) Wildcards() *api.WildcardsApiService {
 	return c.Client.WildcardsApi
 }
 
-func (c *SDKClient) WxPackageAccount() *api.WxPackageAccountApiService {
-	return c.Client.WxPackageAccountApi
-}
-
-func (c *SDKClient) WxPackagePackage() *api.WxPackagePackageApiService {
-	return c.Client.WxPackagePackageApi
-}
-
 func (c *SDKClient) XijingComplexTemplate() *api.XijingComplexTemplateApiService {
 	return c.Client.XijingComplexTemplateApi
-}
-
-func (c *SDKClient) XijingDeriveClickEffect() *api.XijingDeriveClickEffectApiService {
-	return c.Client.XijingDeriveClickEffectApi
-}
-
-func (c *SDKClient) XijingDeriveRole() *api.XijingDeriveRoleApiService {
-	return c.Client.XijingDeriveRoleApi
-}
-
-func (c *SDKClient) XijingDeriveTempToken() *api.XijingDeriveTempTokenApiService {
-	return c.Client.XijingDeriveTempTokenApi
 }
 
 func (c *SDKClient) XijingPage() *api.XijingPageApiService {

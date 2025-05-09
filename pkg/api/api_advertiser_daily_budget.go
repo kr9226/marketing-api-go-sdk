@@ -11,13 +11,15 @@ package api
 
 import (
 	"context"
-	"github.com/antihax/optional"
-	"github.com/tencentad/marketing-api-go-sdk/pkg/errors"
-	. "github.com/tencentad/marketing-api-go-sdk/pkg/model"
 	"io/ioutil"
 	"net/http"
 	"net/url"
 	"strings"
+
+	"github.com/antihax/optional"
+	"github.com/tencentad/marketing-api-go-sdk/pkg/errors"
+	"github.com/tencentad/marketing-api-go-sdk/pkg/model"
+	. "github.com/tencentad/marketing-api-go-sdk/pkg/model"
 )
 
 // Linger please
@@ -32,7 +34,7 @@ AdvertiserDailyBudgetApiService 获取竞价广告账户日预算
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param accountId
  * @param optional nil or *AdvertiserDailyBudgetGetOpts - Optional Parameters:
-     * @param "Fields" (optional.Interface of []string) -  返回参数的字段列表
+     * @param "Fields" (optional.Interface of []string) -
 
 @return AdvertiserDailyBudgetGetResponse
 */
@@ -101,7 +103,7 @@ func (a *AdvertiserDailyBudgetApiService) Get(ctx context.Context, accountId int
 		err = a.client.decode(&localVarResponse, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
 		if err == nil {
 			if *localVarResponse.Code != 0 {
-				var localVarResponseErrors []ApiErrorStruct
+				var localVarResponseErrors []model.ApiErrorStruct
 				if localVarResponse.Errors != nil {
 					localVarResponseErrors = *localVarResponse.Errors
 				}

@@ -11,13 +11,15 @@ package api
 
 import (
 	"context"
-	"github.com/antihax/optional"
-	"github.com/tencentad/marketing-api-go-sdk/pkg/errors"
-	. "github.com/tencentad/marketing-api-go-sdk/pkg/model"
 	"io/ioutil"
 	"net/http"
 	"net/url"
 	"strings"
+
+	"github.com/antihax/optional"
+	"github.com/tencentad/marketing-api-go-sdk/pkg/errors"
+	"github.com/tencentad/marketing-api-go-sdk/pkg/model"
+	. "github.com/tencentad/marketing-api-go-sdk/pkg/model"
 )
 
 // Linger please
@@ -35,17 +37,25 @@ DynamicAdVideoTemplatesApiService 获取动态商品视频模板
  * @param adcreativeTemplateId
  * @param productMode
  * @param optional nil or *DynamicAdVideoTemplatesGetOpts - Optional Parameters:
+     * @param "SupportChannel" (optional.Bool) -
      * @param "Page" (optional.Int64) -
      * @param "PageSize" (optional.Int64) -
+     * @param "TemplateIdList" (optional.Interface of []int64) -
+     * @param "TemplateName" (optional.String) -
+     * @param "DynamicAdTemplateOwnershipType" (optional.String) -
      * @param "Fields" (optional.Interface of []string) -  返回参数的字段列表
 
 @return DynamicAdVideoTemplatesGetResponse
 */
 
 type DynamicAdVideoTemplatesGetOpts struct {
-	Page     optional.Int64
-	PageSize optional.Int64
-	Fields   optional.Interface
+	SupportChannel                 optional.Bool
+	Page                           optional.Int64
+	PageSize                       optional.Int64
+	TemplateIdList                 optional.Interface
+	TemplateName                   optional.String
+	DynamicAdTemplateOwnershipType optional.String
+	Fields                         optional.Interface
 }
 
 func (a *DynamicAdVideoTemplatesApiService) Get(ctx context.Context, accountId int64, productCatalogId int64, adcreativeTemplateId int64, productMode string, localVarOptionals *DynamicAdVideoTemplatesGetOpts) (DynamicAdVideoTemplatesGetResponseData, http.Header, error) {
@@ -70,11 +80,23 @@ func (a *DynamicAdVideoTemplatesApiService) Get(ctx context.Context, accountId i
 	localVarQueryParams.Add("product_catalog_id", parameterToString(productCatalogId, ""))
 	localVarQueryParams.Add("adcreative_template_id", parameterToString(adcreativeTemplateId, ""))
 	localVarQueryParams.Add("product_mode", parameterToString(productMode, ""))
+	if localVarOptionals != nil && localVarOptionals.SupportChannel.IsSet() {
+		localVarQueryParams.Add("support_channel", parameterToString(localVarOptionals.SupportChannel.Value(), ""))
+	}
 	if localVarOptionals != nil && localVarOptionals.Page.IsSet() {
 		localVarQueryParams.Add("page", parameterToString(localVarOptionals.Page.Value(), ""))
 	}
 	if localVarOptionals != nil && localVarOptionals.PageSize.IsSet() {
 		localVarQueryParams.Add("page_size", parameterToString(localVarOptionals.PageSize.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.TemplateIdList.IsSet() {
+		localVarQueryParams.Add("template_id_list", parameterToString(localVarOptionals.TemplateIdList.Value(), "multi"))
+	}
+	if localVarOptionals != nil && localVarOptionals.TemplateName.IsSet() {
+		localVarQueryParams.Add("template_name", parameterToString(localVarOptionals.TemplateName.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.DynamicAdTemplateOwnershipType.IsSet() {
+		localVarQueryParams.Add("dynamic_ad_template_ownership_type", parameterToString(localVarOptionals.DynamicAdTemplateOwnershipType.Value(), ""))
 	}
 	if localVarOptionals != nil && localVarOptionals.Fields.IsSet() {
 		localVarQueryParams.Add("fields", parameterToString(localVarOptionals.Fields.Value(), "multi"))
@@ -117,7 +139,7 @@ func (a *DynamicAdVideoTemplatesApiService) Get(ctx context.Context, accountId i
 		err = a.client.decode(&localVarResponse, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
 		if err == nil {
 			if *localVarResponse.Code != 0 {
-				var localVarResponseErrors []ApiErrorStruct
+				var localVarResponseErrors []model.ApiErrorStruct
 				if localVarResponse.Errors != nil {
 					localVarResponseErrors = *localVarResponse.Errors
 				}

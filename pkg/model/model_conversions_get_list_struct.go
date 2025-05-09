@@ -38,4 +38,8 @@ type ConversionsGetListStruct struct {
 	DeepBehaviorAdvancedGoalMinPrice *int64                     `json:"deep_behavior_advanced_goal_min_price,omitempty"`
 	DeepBehaviorAdvancedGoalMaxPrice *int64                     `json:"deep_behavior_advanced_goal_max_price,omitempty"`
 	DeepOptimizationGoalType         DeepOptimizationGoalType   `json:"deep_optimization_goal_type,omitempty"`
+	ForwardLinkAssist                IntOptimizationGoal        `json:"forward_link_assist,omitempty"`
+	IncubationOptimizationGoal       IntOptimizationGoal        `json:"incubation_optimization_goal,omitempty"`
+	DisableMessage                   *string                    `json:"disable_message,omitempty"`
+	InspectionFreeSwitch             *bool                      `json:"inspection_free_switch,omitempty"`
 }
